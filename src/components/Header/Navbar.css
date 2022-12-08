@@ -1,0 +1,160 @@
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    
+}
+
+nav a h1{
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: .5px;
+    
+
+}
+
+.menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul li a{
+    color: var(--white);;
+        font-size: 18px;
+        font-family: "";
+        font-weight: 500;
+        letter-spacing: .5px;
+        margin: 0 25px 0 10px;
+        margin-top: 10px;
+}
+
+.link{
+    display: none;
+}
+
+.fa-times{
+    display: none;
+}
+
+.icons i{
+    color: #232323;
+    font-size: 1.7rem;
+    margin-right: 25px;
+    color: var(--white);;
+}
+
+.fa-bars{
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    display: none;
+    z-index: 4;
+
+}
+
+@media screen and (max-width: 1024px) {
+    nav{
+        box-shadow: 0 3px 3px -3px #0000001f;
+        justify-content: space-between;
+        padding: 18px 25px 0 25px;
+        height: 100%;
+        
+    background-color: var(--oxford-blue-2);
+    }
+    nav a h1{
+        margin: auto;
+    }
+    .menu{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        height: 100vh;
+        width: 300px;
+        z-index: 999;
+        overflow-y: scroll;
+        transform: translateX(-300px);
+        background-color: #fff;
+        visibility: hidden;
+        overflow-y: hidden;
+        transition: transform 1s ease-out;
+        
+    background-color: var(--oxford-blue-2);
+    }
+    .menu ul{
+        display: block;
+    }
+    .menu ul li{
+        display: block;
+        padding: 25px 20px;
+        margin: 0;
+
+    }
+    .menu ul li a {
+        font-size: 19px;
+
+    }
+    .mobile-menu{
+        transform: translateY(0px);
+        visibility: visible;
+        transition: transform 1s ease-out, visibility 0s;
+    }
+    .link{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .link a{
+        padding: 10px 15px;
+        color: #3c3c3c;
+        font-weight: 400;
+        font-size: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .fa-bars{
+        display: flex;
+    }
+    .fa-times{
+        display: flex;
+        position: absolute;
+        right: 10%;
+        top: 15px;
+        font-size: 2rem;
+        color: red;
+        cursor: pointer;
+    }
+    .fa-shopping-cart{
+        display: none;
+    }
+    .active{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    nav {
+        padding: 15px 20px 0 20px;
+    }
+    .icons i{
+        font-size: 1.6rem;
+        margin-right: 10px;
+    }
+    nav a h1{
+        font-size: 1.7rem;
+        margin-left: 10px;
+    }
+    .fa-bars{
+        font-size: 1.6rem;
+    }
+}
